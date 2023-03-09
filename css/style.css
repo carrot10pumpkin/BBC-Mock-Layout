@@ -1,0 +1,626 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+  margin:0;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  display: grid;
+grid-template-areas: 
+"header header header"
+"space main space2"
+"footer footer footer";
+grid-template-rows: 46px 1fr 481px; 
+grid-template-columns: 15% 1fr 15%;
+
+gap: 10px 10px;
+
+height: 100vh;
+margin: 0; 
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+
+header, main, footer, div{
+  /* padding: 1.2em; */
+  /* background: gold; */
+}
+
+
+
+.pageNav {
+	grid-area: header;
+	/* padding: 0em; */
+	
+  background-color: rgb(0, 0, 0);
+	overflow: hidden;
+  padding: 0 0 0 306px;
+}
+
+#mArticle{
+
+grid-area:main;
+
+padding:11px 3px; 
+
+
+}
+
+#space {
+grid-area: space;
+
+}
+
+#space2{
+grid-area: space2;
+
+}
+
+
+
+#barticles{
+
+
+grid-area:footer;
+grid-column: 2;
+padding-left: 15px;
+
+}
+
+#barticles figure img
+{
+
+height: 228px;
+width:417px;
+
+}
+
+
+
+
+
+
+
+
+
+/******************************************
+/* NAVIGATION
+/*******************************************/
+
+nav{
+
+margin:0 0 0 0;
+font-size: 14px;
+
+}
+
+
+
+
+nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+
+
+}
+
+
+nav ul li {
+
+  float: left;
+  padding: 9px 0 5px 0;
+  border-right:1px solid #595252;
+
+}
+
+
+
+nav ul li a {
+
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 6px 23px 12px 23px; 
+  text-decoration: none;
+  line-height: 16px;
+}
+
+nav li a:hover{
+
+  border-bottom: 3px solid red;
+}
+
+
+
+
+
+
+
+.logo {
+
+  padding: 13px 10px 13.5px 0;
+
+
+}
+
+.logo a {
+  padding: 0;
+
+}
+
+
+.logo a:hover{
+
+  border-bottom: none; 
+}
+
+
+
+
+
+.signin  a {
+
+  padding: 0px 109px 0 13px;
+
+  line-height: 35px;
+
+}
+
+
+.signin i {
+
+ margin-right: 10px;
+
+}
+
+
+.more a {
+
+  padding: 6px 2px 9px 19px;
+
+}
+
+
+.more i{
+
+ font-size: 10px;
+ margin: 0 16px 0 47px;
+
+}
+
+
+.search {
+
+  padding: 13px 17px 13.5px 15px;
+  border: none;
+  
+
+
+}
+
+
+
+button {
+	left: -29px;
+	margin-top: -6px;
+	opacity: 1.5;
+	border: 1px solid transparent;
+	position: relative;
+	top: 1px;
+	height: 20px;
+	background-color: transparent;
+}
+
+button[type="submit"]:focus,
+input[type="search"]:focus {
+  box-shadow: 0 0 3px 0 #1183d6;
+  border-color: #1183d6;
+  outline: none;
+}
+
+
+
+
+/******************************************
+/* END NAVIGATION
+/*******************************************/
+
+
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+
+
+
+
+.toplogo{
+
+  margin-bottom: 52px;
+  padding-left: 8px;
+  font-size: x-large;
+  margin-top: 9px;
+color: #494949;
+
+
+}
+
+.bottomlogo{
+
+  margin-bottom: 52px ;
+  padding-left: 0;
+margin-top: 14px;
+
+}
+
+#welcome{
+float: left;
+
+}
+
+#news{
+
+
+  margin:0;
+  padding:0;
+
+}
+
+
+
+
+#news h2 {
+  float: left;
+
+  margin: 0;
+  color: #494949;
+  padding-top: 0px;
+  line-height: 17px;
+  border-left: 3px solid red;
+  padding-left: 5px;
+
+}
+
+
+#subtitle{
+
+  margin: 13px 0 0 0;
+  padding: 0;
+
+
+}
+
+#subtitle p{
+
+
+  margin: 0;
+  
+  padding-top: 0px;
+  line-height: 13px;
+  border-left: 3px solid red;
+  padding-left: 5px;
+  font-size: 13px;
+text-transform: uppercase;
+}
+
+
+
+#smallsub{
+
+  margin: 13px 0 0 0;
+  padding: 0;
+
+
+}
+
+#smallsub p{
+
+
+  margin: 0;
+  
+  padding-top: 0px;
+  line-height: 13px;
+  border-left: 2px solid rgb(0, 153, 255);
+  padding-left: 5px;
+  font-size: 13px;
+text-transform: uppercase;
+}
+
+
+
+#hsub{
+
+  margin: 13px 0 0 0;
+  padding: 0;
+
+
+}
+
+#hsub p{
+
+
+  margin: 0;
+  
+  padding-top: 0px;
+  line-height: 13px;
+  border-left: 2px solid rgb(255, 38, 0);
+  padding-left: 5px;
+  font-size: 13px;
+text-transform: uppercase;
+}
+
+
+#vsub{
+
+  margin: 13px 0 0 0;
+  padding: 0;
+
+
+}
+
+#vsub p{
+
+
+  margin: 0;
+  
+  padding-top: 0px;
+  line-height: 13px;
+  border-left: 2px solid rgb(101, 79, 168);
+  padding-left: 5px;
+  font-size: 13px;
+text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+#date{
+
+float: right; 
+padding-right: 41px;
+
+}
+
+
+
+#limg{
+float: left;
+margin-right: 15px;
+margin-left: 10px;
+position: relative;
+}
+
+
+
+
+
+.large {
+  position: absolute;
+ 
+  margin: 0 auto;
+  width: 32.9%;
+  height: 352px;
+  padding-left: 11px;
+  
+}
+
+
+.large .content{
+
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: linear-gradient(0deg, #1a1919, transparent);
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding:0 0 17px 10px; 
+
+
+}
+
+
+.content h2{
+
+  padding-bottom: 40px;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.content p{
+
+ 
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+
+
+
+
+
+figcaption h3{
+
+  color:#090909;
+
+}
+
+
+
+figcaption p {
+color:#979797;
+  margin: 13px 0 0 0;
+
+
+}
+
+
+
+/******************************************
+/* SMALL IMAGES
+/*******************************************/
+.simg{
+
+display: grid;
+grid-gap: 9px 2px;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+width: 49%;
+}
+
+.tiny{
+  
+ 
+
+
+}
+
+.small{
+ 
+  position: absolute;
+  margin: 0 auto;
+  width: 16%;
+  height: 172px;
+  padding-left: 1px;
+
+}
+
+.small .smallc{
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: linear-gradient(0deg, #1a1919, transparent);
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding:0 0 17px 10px; 
+
+
+}
+
+
+.small2{
+ 
+  position: absolute;
+  margin: 0 0 0 320px;
+  width: 16%;
+  height: 170px;
+  padding-left: 1px;
+
+}
+
+
+.small2 .smallc{
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: linear-gradient(0deg, #1a1919, transparent);
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding:0 0 17px 10px; 
+
+
+}
+
+
+
+.small3{
+ 
+  position: absolute;
+  margin: 0 0 -1px 0;
+  width: 16%;
+  height: 351px;
+  padding-left: 1px;
+}
+
+
+
+
+.small3 .smallc{
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: linear-gradient(0deg, #1a1919, transparent);
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding:0 0 17px 10px; 
+
+
+}
+
+
+.small4{
+ 
+  position: absolute;
+  margin: 0 0px 3px 323px;
+  width: 15.9%;
+  height: 351px;
+  padding-left: 1px;
+
+}
+
+
+.small4 .smallc{
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: linear-gradient(0deg, #1a1919, transparent);
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding:0 0 17px 10px; 
+
+
+}
+
+
+
+
+
+
+
+
+.fimg{
+
+  display: grid;
+  grid-gap: 13px;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 50%;
+
+}
+
+
+figcaption {
+
+  height: 228px;
+width:417px;
+
+}
